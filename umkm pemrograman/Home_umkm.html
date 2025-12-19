@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Hungry</title>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="Home_umkm.css">
+
+</head>
+
+<body>
+
+    <!-- header section starts -->
+    <header>
+
+        <a href="#" class="logo"><i class="fas fa-utensils"></i>Daily Hungry</a>
+
+        <nav class="navbar">
+            <a class="active" href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#order" style="display: none;">Order</a>
+            <a href="#location">Location</a>
+        </nav>
+
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <i class="fas fa-search" id="search-icon" style="display: none;"></i>
+            <a href="#" class="fas fa-heart" style="display: none;"></a>
+            <i class="fas fa-shopping-cart" id="cart-icon"></i>
+            <i class="fas fa-calculator" id="kalku-icon"></i>
+        </div>
+
+        <!-- kalkulator -->
+        <table class="kalkulator">
+            <tr>
+                <td colspan="3"><input class="display-box" type="text" id="result" disabled /> </td>
+                <td><input type="button" value="C" onclick="clearScrean()" id="btn" /> </td>
+            </tr>
+            <tr>
+                <td> <input type="button" value="1" onclick="display('1')" /> </td>
+                <td> <input type="button" value="2" onclick="display('2')" /> </td>
+                <td> <input type="button" value="3" onclick="display('3')" /> </td>
+                <td> <input type="button" value="/" onclick="display('/')" /> </td>
+            </tr>
+            <tr>
+                <td> <input type="button" value="4" onclick="display('4')" /> </td>
+                <td> <input type="button" value="5" onclick="display('5')" /> </td>
+                <td> <input type="button" value="6" onclick="display('6')" /> </td>
+                <td> <input type="button" value="-" onclick="display('-')" /> </td>
+            </tr>
+            <tr>
+                <td> <input type="button" value="7" onclick="display('7')" /> </td>
+                <td> <input type="button" value="8" onclick="display('8')" /> </td>
+                <td> <input type="button" value="9" onclick="display('9')" /> </td>
+                <td> <input type="button" value="+" onclick="display('+')" /> </td>
+            </tr>
+            <tr>
+                <td> <input type="button" value="." onclick="display('.')" /> </td>
+                <td> <input type="button" value="0" onclick="display('0')" /> </td>
+
+                <td> <input type="button" value="=" onclick="calculate()" id="btn" /> </td>
+                <td> <input type="button" value="x" onclick="display('*')" /> </td>
+            </tr>
+
+        </table>
+        <!-- kalkulator -->
+
+        <!-- cart -->
+        <div class="cart">
+            <h2 class="cart-title">Your Cart</h2>
+
+            <!-- content -->
+            <div class="cart-content">
+                <!-- test box -->
+
+            </div>
+
+            <!-- total -->
+            <div class="total">
+                <div class="total-title">Total</div>
+                <div class="total-price">0</div>
+            </div>
+
+            <!-- buy button -->
+            <button type="button" class="btn-buy"><a
+                    href="https://api.whatsapp.com/send?phone=6289605402443 &text=Hai Admin, Saya Mau Pesan Cakenya dengan Variant ........ Sebanyak ......... pcs. Total Harganya adalah....">Buy
+                    Now</a></button>
+
+            <!-- cart close -->
+            <i class="fas fa-times" id="cart-close"></i>
+
+        </div>
+
+        <!-- cart -->
+
+
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- search form -->
+
+    <form action="" id="search-form">
+        <input type="search" placeholder="Ini Pajangan" name="" id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+        <i class="fas fa-times" id="close"></i>
+
+    </form>
+
+
+
+    <!-- home section starts -->
+    <section class="home" id="home">
+
+        <div class="swiper mySwiper home-slider">
+
+            <div class="swiper-wrapper wrapper">
+
+                <div class="swiper-slide slide">
+                    <div class="content">
+                        <span>Our Special Menu</span>
+                        <h3>Nasi Bakar Ayam</h3>
+                        <p>Nasi bakar ayam adalah hidangan nasi berbumbu yang diisi suwiran ayam berbumbu, 
+                            dibungkus daun pisang, lalu dibakar hingga harum. Rasanya gurih, aromanya khas daun pisang, 
+                            dan cocok dinikmati hangat.</p>
+                        <a href="#" class="btn">Order Now</a>
+                    </div>
+                    <div class="image">
+                        <img src="assets/img/Resep-Nasi-Bakar-Sambal-Teri-Menu-Makan-Malam.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="content">
+                        <span>0ur Special Menu</span>
+                        <h3>Nasi Bakar Ayam Pete</h3>
+                        <p>Nasi bakar pete adalah nasi berbumbu yang diisi pete dan lauk gurih, 
+                            dibungkus daun pisang lalu dibakar sampai aromanya keluar. Rasanya gurih, wangi daun pisang, 
+                            dengan sensasi khas pete yang kuat dan nagih.</p>
+                        <a href="#" class="btn">Order Now</a>
+                    </div>
+                    <div class="image">
+                        <img src="assets/img/Resep-Nasi-Bakar-Sambal-Teri-Menu-Makan-Malam.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="content">
+                        <span>Our Special Menu</span>
+                        <h3>Nasi Bakar Cumi Hitam</h3>
+                        <p>Nasi bakar cumi hitam adalah nasi berbumbu gurih berisi cumi tinta hitam, 
+                            dibungkus daun pisang dan dibakar hingga harum.</p>
+                        <a href="#" class="btn">Order Now</a>
+                    </div>
+                    <div class="image">
+                        <img src="assets/img/Resep-Nasi-Bakar-Sambal-Teri-Menu-Makan-Malam.jpg" alt="">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+    </section>
+
+    <!--  home section ends -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!--  about section starts -->
+    <section class="about" id="about">
+
+        <h3 class="sub-heading"> About us </h3>
+        <h1 class="heading"> Why choose us? </h1>
+
+        <div class="row">
+
+            <div class="image">
+                <img src="assets/img/Resep-Nasi-Bakar-Sambal-Teri-Menu-Makan-Malam.jpg">
+            </div>
+
+            <div class="content">
+                <h3>Makanan khas indonesia</h3>
+                <p>Nasi bakar adalah makanan khas Indonesia yang terbuat dari nasi berbumbu rempah, diisi berbagai macam lauk seperti ayam, 
+                    ikan, atau cumi, kemudian dibungkus daun pisang dan dibakar hingga matang. Proses pembakaran ini menghasilkan aroma harum 
+                    khas daun pisang serta cita rasa gurih yang lezat, sehingga nasi bakar paling nikmat disantap selagi hangat.</p>
+                <div class="icons-container">
+                    <div class="icons">
+                        <i class="fas fa-shipping-fast"></i>
+                        <span> Diantar </span>
+                    </div>
+
+                    <div class="icons">
+                        <i class="fas fa-dollar-sign"></i>
+                        <span> Murah </span>
+                    </div>
+
+                </div>
+                <a href="#" class="btn"> Learn More</a>
+            </div>
+        </div>
+
+
+    </section>
+    <!--  about section ends -->
+
+    <!--  menu section starts -->
+    <section class="menu" id="menu">
+
+        <h3 class="sub-heading"> Our Menu </h3>
+        <h1 class="heading"> Today's speciality </h1>
+
+        <div class="box-container">
+
+            <!-- 1 -->
+            <div class="box box-cart">
+                <div class="image">
+                    <img src="assets/img/hoho.png" alt="" class="product-img">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3 class="product-title">Nasi Bakar Ayam</h3>
+                    <p>Nasi bakar ayam adalah makanan khas Indonesia berupa nasi berbumbu gurih berisi ayam suwir berbumbu, 
+                        dibungkus daun pisang, lalu dibakar hingga harum dan lezat.</p>
+                    <i class="btn btn-cart">add to cart</i>
+                    <span class="price">Rp10000</span>
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="box box-cart">
+                <div class="image">
+                    <img src="assets/img/Resep-Nasi-Bakar-Sambal-Teri-Menu-Makan-Malam.jpg" alt="" class="product-img">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3 class="product-title">Nasi Bakar Cumi</h3>
+                    <p>Nasi bakar cumi adalah makanan khas Indonesia berupa nasi berbumbu gurih yang diisi cumi berbumbu, dibungkus daun pisang, 
+                        lalu dibakar hingga menghasilkan aroma harum dan rasa lezat.</p>
+                    <i class="btn btn-cart">add to cart</i>
+                    <span class="price">Rp15000</span>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="box box-cart">
+                <div class="image">
+                    <img src="assets/img/Resep-Nasi-Bakar-Sambal-Teri-Menu-Makan-Malam.jpg" alt="" class="product-img">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3 class="product-title">Nasi Bakar Ayam Pete</h3>
+                    <p>Nasi bakar ayam pete adalah makanan khas Indonesia berupa nasi berbumbu gurih berisi ayam dan pete, dibungkus daun pisang, 
+                        lalu dibakar hingga harum dengan cita rasa gurih khas pete.</p>
+                    <i class="btn btn-cart">add to cart</i>
+                    <span class="price">Rp10000</span>
+                </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="box box-cart">
+                <div class="image">
+                    <img src="assets/img/Resep-Nasi-Bakar-Sambal-Teri-Menu-Makan-Malam.jpg" alt="gambar ga muncul"
+                        class="product-img">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3 class="product-title">Nasi Bakar Daging</h3>
+                    <p>Nasi bakar daging adalah makanan khas Indonesia berupa nasi berbumbu gurih berisi daging berbumbu rempah, 
+                        dibungkus daun pisang, lalu dibakar hingga harum dan lezat.</p>
+                    <i class="btn btn-cart">add to cart</i>
+                    <span class="price">Rp10000</span>
+                </div>
+            </div>
+
+            <!-- 5 -->
+            <div class="box box-cart">
+                <div class="image">
+                    <img src="assets/img/Resep-Nasi-Bakar-Sambal-Teri-Menu-Makan-Malam.jpg" alt="" class="product-img">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3 class="product-title">Nasi Bakar Ikan</h3>
+                    <p>Nasi bakar ikan adalah makanan khas Indonesia berupa nasi berbumbu gurih berisi ikan berbumbu rempah, 
+                        dibungkus daun pisang, lalu dibakar hingga harum dan nikmat.</p>
+                    <i class="btn btn-cart">add to cart</i>
+                    <span class="price">Rp10000</span>
+                </div>
+            </div>
+
+
+
+    </section>
+    <!--  menu section ends -->
+
+    <!-- lokasi -->
+
+    <section class="location" id="location">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3964.4349467747265!2d106.843285!3d-6.466454999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwMjcnNTkuMiJTIDEwNsKwNTAnMzUuOCJF!5e0!3m2!1sid!2sid!4v1698378694783!5m2!1sid!2sid"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <!-- lokasi -->
+
+    <!--  footer section starts -->
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>Locations</h3>
+                <a href="#">Indonesia</a>
+            </div>
+
+            <div class="box">
+                <h3>Quick links</h3>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#menu">Menu</a>
+            </div>
+
+            <div class="box">
+                <h3>Contact info</h3>
+                <a href="https://wa.me/qr/JS2UCTY6ZX7SG1">+62-821-45454-5645</a>
+                <a href="https://wa.me/qr/VCFR5PTAMBETP1">+62-896-7878-4545</a>
+                <a href="mailto:raihanrajakami201@gmail.com">nasibakarenak@gmail.com</a>
+                <a href="mailto:galihaudrey70@gmail.com">nasibakar@gmail.com</a>
+            </div>
+
+            <div class="box">
+                <h3>Follow us</h3>
+                <a href="https://www.instagram.com/dailyhungrrry/?utm_source=ig_web_button_share_sheet&igshid=ZDNlZDc0MzIxNw=="
+                    class="fas fa-instagram"></a>
+            </div>
+
+        </div>
+
+        <div class="credit">Copyright @ 2023 by <span>Adam & Bila & Wahyu</span> </div>
+
+    </section>
+    <!--  footer section ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link -->
+    <script src="Script.js"></script>
+
+</body>
+
+</html>
